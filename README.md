@@ -1,5 +1,13 @@
-# fcm-test-react
+# FCM Test용 React Web
 - FCM Test용 React Web Project
+  - 웹 앱 SDK Config 부분 `public/firebase-messaging-sw.js`와 `src/firebase/firebase-messaging.js` 에 내용 저장
+
+# 테스트 연계 BE 정보
+- Spring Boot
+  - 의존성 com.google.firebase:firebase-admin:9.4.3
+  - 서비스 어카운트 json 파일로 주입
+  - React Web -> Spring Boot 브라우저 토큰 저장
+  - 메시지 Title과 내용 Body String을 받아 putData로 build
 
 ---
 # Getting Started with Create React App
