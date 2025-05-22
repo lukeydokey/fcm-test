@@ -12,14 +12,15 @@ function App() {
   const saveTokenToServer = async (fcmToken) => {
     try {
       // fetch로 Browser Token 저장
-      const response = await fetch('http://localhost:8080/spring/api/test/firebase/saveToken', {
+      const response = await fetch('http://localhost:8080/spring/api/fcm-token', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-USER-ID': '4',
         },
         body: JSON.stringify({
-          userId: 4,          // 실제 로그인된 유저의 ID로 교체 필요
           token: fcmToken,
+          platform: 'WEB',
         }),
       });
       
